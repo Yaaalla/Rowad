@@ -105,7 +105,11 @@ header .container {
 }
 
 .logo img {
-    height: 32px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
 }
 
 nav ul {
@@ -339,7 +343,11 @@ footer .footer-grid {
 }
 
 .footer-brand .footer-logo img {
-    height: 50px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
     margin-bottom: 24px;
 }
 
