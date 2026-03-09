@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AL-Rowad | Excellence in Architecture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/modern-2026.css">
+    <script src="assets/js/modern-2026.js" defer></script>
+    <style>
+        .inner-hero {
+            height: 60vh;
+            background-image: linear-gradient(rgba(11, 16, 21, 0.8), rgba(11, 16, 21, 0.8)), url('assets/images/p3.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .inner-hero h1 {
+            font-size: 64px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .history-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .history-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            transition: var(--transition-fast);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
+
+        .feature-icon img {
+            width: 48px;
+            margin-bottom: 24px;
+            filter: brightness(0) saturate(100%) invert(84%) sepia(29%) saturate(718%) hue-rotate(5deg) brightness(92%) contrast(88%);
+        }
+
+        .callout-section {
+            background-color: var(--bg-secondary);
+            text-align: center;
+            padding: 100px 0;
+            margin: 80px 0;
+        }
+
+        .callout-section h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .callout-section p {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 992px) {
+            .history-layout, .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .inner-hero h1 {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+            .callout-section h2 {
+                font-size: 28px;
+            }
+            .feature-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="Company Logo"></a></div>
+            <nav>
+                <ul>
+                    <li class="en-content"><a href="index.html">Home</a></li>
+                    <li class="en-content"><a href="about.html" class="active">About</a></li>
+                    <li class="en-content"><a href="services.html">Service</a></li>
+                    <li class="en-content"><a href="products.html">Products</a></li>
+                    <li class="en-content"><a href="contact.html">Contact</a></li>
+
+                    <li class="ar-content" style="display:none;"><a href="index.html">الرئيسية</a></li>
+                    <li class="ar-content" style="display:none;"><a href="about.html" class="active">عن الشركة</a></li>
+                    <li class="ar-content" style="display:none;"><a href="services.html">الخدمة</a></li>
+                    <li class="ar-content" style="display:none;"><a href="products.html">المنتجات</a></li>
+                    <li class="ar-content" style="display:none;"><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <div class="lang-switcher-mobile lang-switcher-btn" onclick="languageSwitcher()" style="display:none;">
+                    <span class="en-content">العربية</span>
+                    <span class="ar-content" style="display:none;">English</span>
+                </div>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switcher-btn" onclick="languageSwitcher()">
+                    <span class="en-content">العربية</span>
+                    <span class="ar-content" style="display:none;">English</span>
+                </div>
+                <div class="menu-toggle">
+                    <div class="hamburger-box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <div class="container" data-reveal>
+                <div class="tagline" style="justify-content: center;">ABOUT</div>
+                <h1 class="en-content">ABOUT</h1>
+                <h1 class="ar-content" style="display:none;">عن الشركة</h1>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="container">
+                <div class="history-layout">
+                    <div class="history-image" data-reveal>
+                        <img src="assets/images/p3.jpg" alt="Our History">
+                    </div>
+                    <div class="history-text" data-reveal>
+                        <div class="tagline">Our Roots</div>
+                        <h2 class="en-content">SHORT HISTORY</h2>
+                        <h2 class="ar-content" style="display:none;">تاريخ موجز</h2>
+                        <p class="en-content" style="margin: 24px 0;">A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government they survive as soldiers of fortune to a deluxe you apartment in the sky to explore strange new worlds to seek out new life and new civilizations to boldly go where no man has gone.</p>
+                        <p class="ar-content" style="display:none; margin: 24px 0;">قصة رحلة مصيرية بدأت من هذا الميناء الاستوائي على متن هذه السفينة الصغيرة التي لا تزال مطلوبة من قبل الحكومة ويعيشون كجنود محظوظين إلى شقة فخمة في السماء للاستكشاف عوالم غريبة جديدة والبحث عن حياة جديدة وحضارات جديدة للذهاب بجرأة حيث لم يذهب أحد من قبل.</p>
+                        
+                        <p class="en-content text-italic" style="border-left: 2px solid var(--accent); padding-left: 24px;">"You would see the biggest gift would be from me and the card attached would so thank you for being a friend the biggest gift."</p>
+                        <p class="ar-content text-italic" style="display:none; border-right: 2px solid var(--accent); padding-right: 24px;">"سترى أكبر هدية ستكون مني والبطاقة المرفقة ستشكرك على كونك صديقًا أكبر هدية."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners-section" style="padding: 80px 0; background: var(--bg-main);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="en-content">Our Partners</h2>
+                    <h2 class="ar-content" style="display:none;">شركاؤنا</h2>
+                </div>
+                <div class="partners-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; opacity: 0.7;">
+                    <img src="assets/images/PARTNERS/p-1.png" alt="Partner 1" style="max-height: 60px;">
+                    <img src="assets/images/PARTNERS/p-2.png" alt="Partner 2" style="max-height: 60px;">
+                    <img src="assets/images/PARTNERS/p-3.png" alt="Partner 3" style="max-height: 60px;">
+                    <img src="assets/images/PARTNERS/p-4.png" alt="Partner 4" style="max-height: 60px;">
+                    <img src="assets/images/PARTNERS/p-5.png" alt="Partner 5" style="max-height: 60px;">
+                </div>
+            </div>
+        </section>
+
+        <section class="callout-section">
+            <div class="container" data-reveal>
+                <h2 class="en-content">High-Quality <span class="text-accent">Market</span> Experiences</h2>
+                <h2 class="ar-content" style="display:none;">تجارب سوقية <span class="text-accent">عالية الجودة</span></h2>
+                <p class="en-content">A tale of a fateful trip that started from this tropic port aboard this tiny ship today still wanted by the government they survive as soldiers of fortune to ever wondered the east side to a deluxe apartment.</p>
+                <p class="ar-content" style="display:none;">قصة رحلة مصيرية بدأت من هذا الميناء الاستوائي على متن هذه السفينة الصغيرة التي لا تزال مطلوبة من قبل الحكومة ويعيشون كجنود محظوظين للتساؤل عن الجانب الشرقي إلى شقة فخمة.</p>
+                <a href="contact.html" class="btn-premium btn-filled">CONTACT US</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-header" style="text-align: center;" data-reveal>
+                    <div class="tagline" style="justify-content: center;">WE ARE ALWAYS BEST</div>
+                    <h2 class="en-content">WE ARE ALWAYS BEST</h2>
+                    <h2 class="ar-content" style="display:none;">نحن نتميز دائماً</h2>
+                    <p class="en-content" style="margin-top: 16px; color: var(--text-secondary);">A tale of a fateful trip that started from this tropic port aboard this tiny ship today stills</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card" data-reveal>
+                        <div class="premium-icon-box">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="en-content">High-Quality Services</h3>
+                        <p class="en-content">The Love Boat soon will be making another run plore strange tools enter new worlds.</p>
+                        
+                        <h3 class="ar-content" style="display:none;">خدمات عالية الجودة</h3>
+                        <p class="ar-content" style="display:none;">سوف تقوم سفينة الحب قريبًا بتشغيل جولة أخرى لاستكشاف أدوات غريبة تدخل عوالم جديدة.</p>
+                    </div>
+                    <div class="feature-card" data-reveal>
+                        <div class="premium-icon-box">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="en-content">High-Quality Services</h3>
+                        <p class="en-content">The Love Boat soon will be making another run plore strange tools enter new worlds.</p>
+                        
+                        <h3 class="ar-content" style="display:none;">خدمات عالية الجودة</h3>
+                        <p class="ar-content" style="display:none;">سوف تقوم سفينة الحب قريبًا بتشغيل جولة أخرى لاستكشاف أدوات غريبة تدخل عوالم جديدة.</p>
+                    </div>
+                    <div class="feature-card" data-reveal>
+                        <div class="premium-icon-box">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="en-content">High-Quality Services</h3>
+                        <p class="en-content">The Love Boat soon will be making another run plore strange tools enter new worlds.</p>
+                        
+                        <h3 class="ar-content" style="display:none;">خدمات عالية الجودة</h3>
+                        <p class="ar-content" style="display:none;">سوف تقوم سفينة الحب قريبًا بتشغيل جولة أخرى لاستكشاف أدوات غريبة تدخل عوالم جديدة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand" data-reveal>
+                    <div class="footer-logo"><img src="assets/images/logo.png" alt="Company Logo"></div>
+                    <p class="en-content">Efficiency and excellence in every step.</p>
+                    <p class="ar-content" style="display:none;">الكفاءة والتميز في كل خطوة.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sitemap Column -->
+                <div class="footer-column" data-reveal>
+                    <h4 class="en-content">Sitemap</h4>
+                    <h4 class="ar-content" style="display:none;">خريطة الموقع</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-column" data-reveal>
+                    <h4 class="en-content">Services</h4>
+                    <h4 class="ar-content" style="display:none;">خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li class="en-content"><a href="services.html">Architectural Design</a></li>
+                        <li class="en-content"><a href="services.html">Structural Engineering</a></li>
+                        <li class="en-content"><a href="services.html">Project Management</a></li>
+                        <li class="en-content"><a href="services.html">Urban Development</a></li>
+
+                        <li class="ar-content" style="display:none;"><a href="services.html">التصميم المعماري</a></li>
+                        <li class="ar-content" style="display:none;"><a href="services.html">الهندسة الإنشائية</a></li>
+                        <li class="ar-content" style="display:none;"><a href="services.html">إدارة المشاريع</a></li>
+                        <li class="ar-content" style="display:none;"><a href="services.html">التطوير الحضري</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column" data-reveal>
+                    <h4 class="en-content">Contact</h4>
+                    <h4 class="ar-content" style="display:none;">تواصل معنا</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="en-content">1234 Street Name, City, Country</p>
+                            <p class="ar-content" style="display:none;">1234 اسم الشارع، المدينة، البلد</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <p>info@yourcompany.com</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (234) 567-890</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p class="en-content">&copy; 2026 Your Company. All rights reserved.</p>
+                    <p class="ar-content" style="display:none;">&copy; 2026 شركتك. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="designer-credit">
+                    <span class="en-content">Designed by <a href="http://www.yaaalla.com" target="_blank">Yaaalla</a></span>
+                    <span class="ar-content" style="display:none;">تصميم بواسطة <a href="http://www.yaaalla.com" target="_blank">يالا</a></span>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="#" class="en-content">Privacy Policy</a>
+                    <a href="#" class="en-content">Terms of Service</a>
+                    <a href="#" class="ar-content" style="display:none;">سياسة الخصوصية</a>
+                    <a href="#" class="ar-content" style="display:none;">شروط الخدمة</a>
+                    <a href="contact.html" class="en-content">Contact Us</a>
+                    <a href="contact.html" class="ar-content" style="display:none;">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
