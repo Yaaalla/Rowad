@@ -556,14 +556,15 @@ footer .footer-bottom {
         grid-template-columns: 1fr;
     }
 
-    /* شركاء - تصغير الصور على الموبايل */
+    /* شركاء - ضبط الصور على الموبايل لتكون أوضح */
     .partners-list {
         gap: 20px !important;
+        padding: 0 10px;
     }
 
     .partners-list img {
-        max-width: 80px !important;
-        max-height: 40px !important;
+        max-width: 90% !important;
+        max-height: 120px !important;
         height: auto;
         width: auto;
     }
