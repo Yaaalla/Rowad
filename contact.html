@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +65,9 @@
             gap: 24px;
         }
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             width: 100%;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--glass-border);
@@ -75,7 +78,9 @@
             transition: var(--transition-fast);
         }
 
-        input:focus, select:focus, textarea:focus {
+        input:focus,
+        select:focus,
+        textarea:focus {
             border-color: var(--accent);
             background: rgba(255, 255, 255, 0.05);
             outline: none;
@@ -92,12 +97,14 @@
             .form-row {
                 grid-template-columns: 1fr;
             }
+
             .contact-form-card {
                 padding: 32px 24px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -153,13 +160,17 @@
                     <div class="contact-sidebar" data-reveal>
                         <div class="section-header">
                             <h2 class="en-content">Let's start a <span class="text-accent">conversation</span>.</h2>
-                            <h2 class="ar-content" style="display:none;">لنبدأ <span class="text-accent">بالتواصل</span>.</h2>
-                            <p class="en-content" style="margin-top: 20px;">A tale of a fateful trip that started from this tropic port aboard this tiny ship today stillers.</p>
-                            <p class="ar-content" style="display:none; margin-top: 20px;">قصة رحلة مشؤومة بدأت من هذا الميناء الاستوائي على متن هذه السفينة الصغيرة اليوم.</p>
+                            <h2 class="ar-content" style="display:none;">لنبدأ <span
+                                    class="text-accent">بالتواصل</span>.</h2>
+                            <p class="en-content" style="margin-top: 20px;">A tale of a fateful trip that started from
+                                this tropic port aboard this tiny ship today stillers.</p>
+                            <p class="ar-content" style="display:none; margin-top: 20px;">قصة رحلة مشؤومة بدأت من هذا
+                                الميناء الاستوائي على متن هذه السفينة الصغيرة اليوم.</p>
                         </div>
 
                         <div class="info-item">
-                            <div class="premium-icon-box" style="width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px;">
+                            <div class="premium-icon-box"
+                                style="width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px;">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <h4 class="en-content">Visit Us</h4>
@@ -169,7 +180,8 @@
                         </div>
 
                         <div class="info-item">
-                            <div class="premium-icon-box" style="width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px;">
+                            <div class="premium-icon-box"
+                                style="width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px;">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <h4 class="en-content">Email Us</h4>
@@ -178,12 +190,14 @@
                         </div>
 
                         <div class="info-item">
-                            <div class="premium-icon-box" style="width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px;">
+                            <div class="premium-icon-box"
+                                style="width: 48px; height: 48px; font-size: 18px; margin-bottom: 16px;">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <h4 class="en-content">Call Us</h4>
                             <h4 class="ar-content" style="display:none;">اتصل بنا</h4>
-                            <p><a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i> +20 10 70753167</a></p>
+                            <p><a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i> +20
+                                    10 70753167</a></p>
                         </div>
                     </div>
 
@@ -192,16 +206,19 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <input type="text" placeholder="First Name *" required class="en-content">
-                                    <input type="text" placeholder="الاسم الأول *" required class="ar-content" style="display:none;">
+                                    <input type="text" placeholder="الاسم الأول *" required class="ar-content"
+                                        style="display:none;">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" placeholder="Last Name *" required class="en-content">
-                                    <input type="text" placeholder="اسم العائلة *" required class="ar-content" style="display:none;">
+                                    <input type="text" placeholder="اسم العائلة *" required class="ar-content"
+                                        style="display:none;">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input type="email" placeholder="Email Address *" required class="en-content">
-                                <input type="email" placeholder="البريد الإلكتروني *" required class="ar-content" style="display:none;">
+                                <input type="email" placeholder="البريد الإلكتروني *" required class="ar-content"
+                                    style="display:none;">
                             </div>
                             <div class="form-group">
                                 <select required class="en-content">
@@ -221,15 +238,20 @@
                             </div>
                             <div class="form-group">
                                 <textarea rows="5" placeholder="Your Message" class="en-content"></textarea>
-                                <textarea rows="5" placeholder="رسالتك" class="ar-content" style="display:none;"></textarea>
+                                <textarea rows="5" placeholder="رسالتك" class="ar-content"
+                                    style="display:none;"></textarea>
                             </div>
-                            <button type="submit" class="btn-premium btn-filled en-content" style="width: 100%;">Send Message</button>
-                            <button type="submit" class="btn-premium btn-filled ar-content" style="display:none; width: 100%;">إرسال الرسالة</button>
+                            <button type="submit" class="btn-premium btn-filled en-content" style="width: 100%;">Send
+                                Message</button>
+                            <button type="submit" class="btn-premium btn-filled ar-content"
+                                style="display:none; width: 100%;">إرسال الرسالة</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer>
@@ -238,10 +260,13 @@
                 <!-- Brand Column -->
                 <div class="footer-brand" data-reveal>
                     <div class="footer-logo"><img src="assets/images/logo.jpg" alt="AL-Rowad"></div>
-                    <p class="en-content">Architecting future landscapes with precision, innovation, and an unwavering commitment to excellence since 1998.</p>
-                    <p class="ar-content" style="display:none;">هندسة المناظر الطبيعية المستقبلية بالدقة والابتكار والالتزام الراسخ بالتميز منذ عام 1998.</p>
+                    <p class="en-content">Architecting future landscapes with precision, innovation, and an unwavering
+                        commitment to excellence since 1998.</p>
+                    <p class="ar-content" style="display:none;">هندسة المناظر الطبيعية المستقبلية بالدقة والابتكار
+                        والالتزام الراسخ بالتميز منذ عام 1998.</p>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/alrowadenergy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/alrowadenergy" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
                         <a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -291,8 +316,9 @@
                             <p><a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
                         </li>
                         <li>
-                          
-                            <p><a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i> +20 10 70753167</a></p>
+
+                            <p><a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i> +20
+                                    10 70753167</a></p>
                         </li>
                     </ul>
                 </div>
@@ -303,8 +329,10 @@
                     <p class="ar-content" style="display:none;">&copy; 2026 الرواد. جميع الحقوق محفوظة.</p>
                 </div>
                 <div class="designer-credit">
-                    <span class="en-content">Designed by <a href="http://www.yaaalla.com" target="_blank">Yaaalla</a></span>
-                    <span class="ar-content" style="display:none;">تصميم بواسطة <a href="http://www.yaaalla.com" target="_blank">يالا</a></span>
+                    <span class="en-content">Designed by <a href="http://www.yaaalla.com"
+                            target="_blank">Yaaalla</a></span>
+                    <span class="ar-content" style="display:none;">تصميم بواسطة <a href="http://www.yaaalla.com"
+                            target="_blank">يالا</a></span>
                 </div>
                 <div class="footer-legal-links">
                     <a href="#" class="en-content">Privacy Policy</a>
@@ -317,4 +345,5 @@
     </footer>
 
 </body>
+
 </html>
