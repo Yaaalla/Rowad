@@ -63,7 +63,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Inject Floating Contact Buttons
+    const floatingContacts = document.createElement('div');
+    floatingContacts.className = 'floating-contacts';
+    floatingContacts.innerHTML = `
+        <a href="https://wa.me/201070753167" target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip en-content">WhatsApp Us</span>
+            <span class="tooltip ar-content">تواصل معنا واتساب</span>
+        </a>
+        <a href="mailto:info@alrowad-eg.net" class="floating-btn email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip en-content">Email Us</span>
+            <span class="tooltip ar-content">راسلنا إيميل</span>
+        </a>
+    `;
+    document.body.appendChild(floatingContacts);
+
+    // Initial language check for floating tooltips
+    const currentLang = document.body.classList.contains('rtl') ? 'ar' : 'en';
+    updateFloatingTooltips(currentLang);
 });
+
+function updateFloatingTooltips(lang) {
+    const tooltipsEn = document.querySelectorAll('.floating-btn .tooltip.en-content');
+    const tooltipsAr = document.querySelectorAll('.floating-btn .tooltip.ar-content');
+    
+    if (lang === 'ar') {
+        tooltipsEn.forEach(el => el.style.display = 'none');
+        tooltipsAr.forEach(el => el.style.display = 'block');
+    } else {
+        tooltipsEn.forEach(el => el.style.display = 'block');
+        tooltipsAr.forEach(el => el.style.display = 'none');
+    }
+}
 
 function languageSwitcher(lang) {
     const body = document.body;
@@ -88,4 +122,7 @@ function languageSwitcher(lang) {
         });
         arContent.forEach(el => el.style.display = 'none');
     }
+
+    // Update floating tooltips
+    updateFloatingTooltips(lang);
 }
