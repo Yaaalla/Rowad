@@ -138,6 +138,121 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Catalogs Section */
+        .catalogs {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, transparent, rgba(216, 181, 40, 0.02));
+        }
+
+        .catalogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 50px;
+        }
+
+        .pdf-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: var(--transition-slow);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pdf-card:hover {
+            border-color: rgba(216, 181, 40, 0.4);
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .pdf-thumb {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #151d25;
+            position: relative;
+        }
+
+        .pdf-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .pdf-card:hover .pdf-thumb img {
+            transform: scale(1.05);
+        }
+
+        .pdf-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .pdf-info .category-pill {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .pdf-info h4 {
+            font-size: 16px;
+            color: var(--text-primary);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .pdf-action {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .pdf-action i {
+            transition: var(--transition-fast);
+        }
+
+        .pdf-card:hover .pdf-action i {
+            transform: translateY(3px);
+        }
+
+        .pdf-overlay-icon {
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 16, 21, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-fast);
+            backdrop-filter: blur(2px);
+        }
+
+        .pdf-card:hover .pdf-overlay-icon {
+            opacity: 1;
+        }
+
+        .pdf-overlay-icon i {
+            font-size: 32px;
+            color: var(--accent);
+        }
     </style>
 </head>
 <body>
@@ -280,6 +395,168 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalogs">
+            <div class="container">
+                <div class="tagline" data-reveal>RESOURCES</div>
+                <h2 class="en-content" data-reveal>Product Catalogs</h2>
+                <h2 class="ar-content" style="display:none;" data-reveal>كتالوجات المنتجات</h2>
+                
+                <div class="catalogs-grid">
+                    <!-- CSB PDF Card -->
+                    <a href="assets/images/products/Battery Brands: 1) CSB.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Battery Brands: 1) CSB.png" alt="CSB Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">Batteries</span>
+                            <span class="category-pill ar-content" style="display:none;">البطاريات</span>
+                            <h4 class="en-content">CSB Battery Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات CSB</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- FIAMM PDF Card -->
+                    <a href="assets/images/products/Battery Brands: 2) FIAMM.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Battery Brands: 2) FIAMM.png" alt="FIAMM Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">Batteries</span>
+                            <span class="category-pill ar-content" style="display:none;">البطاريات</span>
+                            <h4 class="en-content">FIAMM Battery Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات FIAMM</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- YUASA PDF Card -->
+                    <a href="assets/images/products/Battery Brands: 3) YUASA.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Battery Brands: 3) YUASA.png" alt="YUASA Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">Batteries</span>
+                            <span class="category-pill ar-content" style="display:none;">البطاريات</span>
+                            <h4 class="en-content">YUASA Battery Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات YUASA</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Rsun PDF Card -->
+                    <a href="assets/images/products/UPS Brands: 2) Rsun.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/UPS Brands: 2) Rsun.png" alt="Rsun Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">UPS Systems</span>
+                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
+                            <h4 class="en-content">Rsun UPS Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج UPS Rsun</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Javac PDF Card -->
+                    <a href="assets/images/products/UPS Brands: 3) Javac.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/UPS Brands: 3) Javac.png" alt="Javac Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">UPS Systems</span>
+                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
+                            <h4 class="en-content">Javac UPS Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج UPS Javac</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Powerscale PDF Card -->
+                    <a href="assets/images/products/3) Powerscale.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/3) Powerscale.png" alt="Powerscale Data">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">UPS Systems</span>
+                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
+                            <h4 class="en-content">Powerscale Technical Data</h4>
+                            <h4 class="ar-content" style="display:none;">البيانات الفنية Powerscale</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Powervalue PDF Card -->
+                    <a href="assets/images/products/2) Powervalue 11 RT.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/2) Powervalue 11 RT.png" alt="Powervalue Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">UPS Systems</span>
+                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
+                            <h4 class="en-content">Powervalue 11 RT</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج Powervalue 11 RT</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Delta PDF Card -->
+                    <a href="assets/images/products/Stabilizer Brand : Delta.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Stabilizer Brand : Delta.png" alt="Delta Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <span class="category-pill en-content">Stabilizers</span>
+                            <span class="category-pill ar-content" style="display:none;">منظمات الجهد</span>
+                            <h4 class="en-content">Delta Stabilizer Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج منظمات Delta</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

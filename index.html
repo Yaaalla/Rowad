@@ -187,6 +187,112 @@
                 gap: 40px;
             }
         }
+
+        /* Catalogs Section */
+        .catalogs {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, transparent, rgba(216, 181, 40, 0.02));
+        }
+
+        .catalogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 50px;
+        }
+
+        .pdf-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: var(--transition-slow);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pdf-card:hover {
+            border-color: rgba(216, 181, 40, 0.4);
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .pdf-thumb {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #151d25;
+            position: relative;
+        }
+
+        .pdf-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .pdf-card:hover .pdf-thumb img {
+            transform: scale(1.05);
+        }
+
+        .pdf-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .pdf-info h4 {
+            font-size: 16px;
+            color: var(--text-primary);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .pdf-action {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .pdf-action i {
+            transition: var(--transition-fast);
+        }
+
+        .pdf-card:hover .pdf-action i {
+            transform: translateY(3px);
+        }
+
+        .pdf-overlay-icon {
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 16, 21, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-fast);
+            backdrop-filter: blur(2px);
+        }
+
+        .pdf-card:hover .pdf-overlay-icon {
+            opacity: 1;
+        }
+
+        .pdf-overlay-icon i {
+            font-size: 32px;
+            color: var(--accent);
+        }
     </style>
 </head>
 
@@ -419,12 +525,128 @@
             <div class="container">
                 <div class="section-header" style="text-align: center; margin-bottom: 60px;" data-reveal>
                     <div class="tagline" style="justify-content: center;">OUR PARTNERS</div>
-                    <h2>Our business plan consultants have real world experience</h2>
+                    <h2 class="en-content">Trusted by International Brands</h2>
+                    <h2 class="ar-content" style="display:none;">موثوقون من قبل علامات تجارية عالمية</h2>
                 </div>
                 <div class="partners-list"
                     style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; opacity: 1;">
                     <img src="./assets/images/PARTNERS/all.jpg" alt="Our Partners"
                         style="max-height: 200px; width: auto; max-width: 100%; border-radius: 20px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Catalogs Section -->
+        <section class="catalogs">
+            <div class="container">
+                <div class="section-header" style="text-align: center;" data-reveal>
+                    <div class="tagline" style="justify-content: center;">Resources</div>
+                    <h2 class="en-content">Product Catalogs</h2>
+                    <h2 class="ar-content" style="display:none;">كتالوجات المنتجات</h2>
+                </div>
+                
+                <div class="catalogs-grid">
+                    <!-- CSB PDF Card -->
+                    <a href="assets/images/products/Battery Brands: 1) CSB.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Battery Brands: 1) CSB.png" alt="CSB Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <h4 class="en-content">CSB Battery Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات CSB</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- FIAMM PDF Card -->
+                    <a href="assets/images/products/Battery Brands: 2) FIAMM.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Battery Brands: 2) FIAMM.png" alt="FIAMM Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <h4 class="en-content">FIAMM Battery Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات FIAMM</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- YUASA PDF Card -->
+                    <a href="assets/images/products/Battery Brands: 3) YUASA.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/Battery Brands: 3) YUASA.png" alt="YUASA Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <h4 class="en-content">YUASA Battery Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات YUASA</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Rsun PDF Card -->
+                    <a href="assets/images/products/UPS Brands: 2) Rsun.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/UPS Brands: 2) Rsun.png" alt="Rsun Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <h4 class="en-content">Rsun UPS Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج UPS Rsun</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Javac PDF Card -->
+                    <a href="assets/images/products/UPS Brands: 3) Javac.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/UPS Brands: 3) Javac.png" alt="Javac Catalog">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <h4 class="en-content">Javac UPS Catalog</h4>
+                            <h4 class="ar-content" style="display:none;">كتالوج UPS Javac</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
+
+                    <!-- Powerscale PDF Card -->
+                    <a href="assets/images/products/3) Powerscale.pdf" target="_blank" class="pdf-card" data-reveal>
+                        <div class="pdf-thumb">
+                            <img src="assets/images/products/pdf-images/3) Powerscale.png" alt="Powerscale Data">
+                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                        </div>
+                        <div class="pdf-info">
+                            <h4 class="en-content">Powerscale Technical Data</h4>
+                            <h4 class="ar-content" style="display:none;">البيانات الفنية Powerscale</h4>
+                        </div>
+                        <div class="pdf-action">
+                            <span class="en-content">Download PDF</span>
+                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -573,14 +795,22 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy;Your Company</p>
+                <div class="footer-copyright">
+                    <p class="en-content">&copy; 2026 Al-Rowad. All rights reserved.</p>
+                    <p class="ar-content" style="display:none;">&copy; 2026 الرواد. جميع الحقوق محفوظة.</p>
+                </div>
                 <div class="footer-legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="#" class="en-content">Privacy Policy</a>
+                    <a href="#" class="en-content">Terms of Service</a>
+                    <a href="contact.html" class="en-content">Contact Us</a>
+
+                    <a href="#" class="ar-content" style="display:none;">سياسة الخصوصية</a>
+                    <a href="#" class="ar-content" style="display:none;">شروط الخدمة</a>
+                    <a href="contact.html" class="ar-content" style="display:none;">اتصل بنا</a>
                 </div>
                 <div class="designer-credit">
-                    Designed by <a href="https://www.yaaalla.com" target="_blank">Yaaalla</a>
+                    <span class="en-content">Designed by <a href="https://www.yaaalla.com" target="_blank">Yaaalla</a></span>
+                    <span class="ar-content" style="display:none;">تصميم بواسطة <a href="https://www.yaaalla.com" target="_blank">يالا</a></span>
                 </div>
             </div>
         </div>
