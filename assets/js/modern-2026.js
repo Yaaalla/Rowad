@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatingContacts = document.createElement('div');
     floatingContacts.className = 'floating-contacts';
     floatingContacts.innerHTML = `
-        <a href="https://wa.me/201070753167" target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp">
+        <a href="https://wa.me/201070753168" target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip en-content">WhatsApp Us</span>
             <span class="tooltip ar-content">تواصل معنا واتساب</span>

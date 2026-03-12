@@ -149,7 +149,30 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 32px;
-            margin-top: 50px;
+            margin-top: 30px;
+        }
+
+        .catalog-category {
+            margin-top: 60px;
+        }
+
+        .category-title {
+            font-size: 22px;
+            color: var(--accent);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .category-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(216, 181, 40, 0.3), transparent);
         }
 
         .pdf-card {
@@ -185,8 +208,9 @@
         .pdf-thumb img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             transition: var(--transition-slow);
+            padding: 10px;
         }
 
         .pdf-card:hover .pdf-thumb img {
@@ -264,13 +288,11 @@
                 <ul>
                     <li class="en-content"><a href="index.html">Home</a></li>
                     <li class="en-content"><a href="about.html">About</a></li>
-                    <li class="en-content"><a href="services.html">Service</a></li>
                     <li class="en-content"><a href="products.html" class="active">Products</a></li>
                     <li class="en-content"><a href="contact.html">Contact</a></li>
 
                     <li class="ar-content" style="display:none;"><a href="index.html">الرئيسية</a></li>
                     <li class="ar-content" style="display:none;"><a href="about.html">عن الشركة</a></li>
-                    <li class="ar-content" style="display:none;"><a href="services.html">الخدمة</a></li>
                     <li class="ar-content" style="display:none;"><a href="products.html" class="active">المنتجات</a></li>
                     <li class="ar-content" style="display:none;"><a href="contact.html">اتصل بنا</a></li>
                 </ul>
@@ -312,86 +334,80 @@
                 </div>
 
                 <div class="products-grid">
-                    <!-- Product 1 -->
+                    <!-- Product 1: UPS Systems -->
                     <div class="product-card" data-reveal>
-                        <img src="assets/images/products/WhatsApp Image 2026-03-09 at 12.10.35 PM (1).jpeg" alt="Premium Product">
+                        <img src="assets/images/products/images/Model: C 1-10 K.jpeg" alt="UPS Model C 1-10K">
                         <div class="product-overlay">
                             <div class="product-info">
-                                <h3 class="en-content">Premium Product</h3>
-                                <p class="en-content">Excellence and quality in every detail.</p>
-                                
-                                <h3 class="ar-content" style="display:none;">منتج متميز</h3>
-                                <p class="ar-content" style="display:none;">التميز والجودة في كل تفصيل.</p>
+                                <h3 class="en-content">UPS Systems</h3>
+                                <p class="en-content">High-performance UPS solutions for critical power protection.</p>
+                                <h3 class="ar-content" style="display:none;">أنظمة UPS</h3>
+                                <p class="ar-content" style="display:none;">حلول UPS عالية الأداء لحماية الطاقة الحرجة.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
+                    <!-- Product 2: Voltage Stabilizers -->
                     <div class="product-card" data-reveal>
-                        <img src="assets/images/products/WhatsApp Image 2026-03-09 at 12.11.12 PM.jpeg" alt="Innovative Solution">
+                        <img src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.10.35 PM (1).jpeg" alt="Voltage Stabilizer">
                         <div class="product-overlay">
                             <div class="product-info">
-                                <h3 class="en-content">Innovative Solution</h3>
-                                <p class="en-content">Excellence and quality in every detail.</p>
-                                
-                                <h3 class="ar-content" style="display:none;">حل مبتكر</h3>
-                                <p class="ar-content" style="display:none;">التميز والجودة في كل تفصيل.</p>
+                                <h3 class="en-content">Voltage Stabilizers</h3>
+                                <p class="en-content">Precision voltage control for industrial applications.</p>
+                                <h3 class="ar-content" style="display:none;">منظمات الجهد</h3>
+                                <p class="ar-content" style="display:none;">تحكم دقيق في الجهد للتطبيقات الصناعية.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 3 -->
+                    <!-- Product 3: Power Quality -->
                     <div class="product-card" data-reveal>
-                        <img src="assets/images/products/WhatsApp Image 2026-03-09 at 12.11.12 PM (1).jpeg" alt="Quality Craftsmanship">
+                        <img src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM.jpeg" alt="Power Quality Solution">
                         <div class="product-overlay">
                             <div class="product-info">
-                                <h3 class="en-content">Quality Craftsmanship</h3>
-                                <p class="en-content">Excellence and quality in every detail.</p>
-                                
-                                <h3 class="ar-content" style="display:none;">صناعة عالية الجودة</h3>
-                                <p class="ar-content" style="display:none;">التميز والجودة في كل تفصيل.</p>
+                                <h3 class="en-content">Power Quality Solutions</h3>
+                                <p class="en-content">Optimizing power efficiency and reliability.</p>
+                                <h3 class="ar-content" style="display:none;">حلول جودة الطاقة</h3>
+                                <p class="ar-content" style="display:none;">تحسين كفاءة الطاقة وموثوقيتها.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
+                    <!-- Product 4: Industrial Batteries -->
                     <div class="product-card" data-reveal>
-                        <img src="assets/images/products/WhatsApp Image 2026-03-09 at 12.11.12 PM (2).jpeg" alt="Modern Design">
+                        <img src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM (1).jpeg" alt="Industrial Batteries">
                         <div class="product-overlay">
                             <div class="product-info">
-                                <h3 class="en-content">Modern Design</h3>
-                                <p class="en-content">Excellence and quality in every detail.</p>
-                                
-                                <h3 class="ar-content" style="display:none;">تصميم عصري</h3>
-                                <p class="ar-content" style="display:none;">التميز والجودة في كل تفصيل.</p>
+                                <h3 class="en-content">Industrial Batteries</h3>
+                                <p class="en-content">Reliable Lead Acid and CSB battery solutions.</p>
+                                <h3 class="ar-content" style="display:none;">بطاريات صناعية</h3>
+                                <p class="ar-content" style="display:none;">حلول بطاريات Lead Acid و CSB الموثوقة.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 5 -->
+                    <!-- Product 5: Maintenance -->
                     <div class="product-card" data-reveal>
-                        <img src="assets/images/products/WhatsApp Image 2026-03-09 at 12.11.12 PM (3).jpeg" alt="Elegant Finish">
+                        <img src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM (2).jpeg" alt="Maintenance Services">
                         <div class="product-overlay">
                             <div class="product-info">
-                                <h3 class="en-content">Elegant Finish</h3>
-                                <p class="en-content">Excellence and quality in every detail.</p>
-                                
-                                <h3 class="ar-content" style="display:none;">لمسات أنيقة</h3>
-                                <p class="ar-content" style="display:none;">التميز والجودة في كل تفصيل.</p>
+                                <h3 class="en-content">Maintenance & Support</h3>
+                                <p class="en-content">Expert engineering support and maintenance services.</p>
+                                <h3 class="ar-content" style="display:none;">الصيانة والدعم</h3>
+                                <p class="ar-content" style="display:none;">دعم هندسي متخصص وخدمات صيانة.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 6 -->
+                    <!-- Product 6: Isolation Transformers -->
                     <div class="product-card" data-reveal>
-                        <img src="assets/images/products/WhatsApp Image 2026-03-09 at 12.10.35 PM (1).jpeg" alt="Premium Product">
+                        <img src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM (3).jpeg" alt="Isolation Transformer">
                         <div class="product-overlay">
                             <div class="product-info">
-                                <h3 class="en-content">Premium Product</h3>
-                                <p class="en-content">Excellence and quality in every detail.</p>
-                                
-                                <h3 class="ar-content" style="display:none;">منتج متميز</h3>
-                                <p class="ar-content" style="display:none;">التميز والجودة في كل تفصيل.</p>
+                                <h3 class="en-content">Isolation Transformers</h3>
+                                <p class="en-content">Superior protection for sensitive electronic equipment.</p>
+                                <h3 class="ar-content" style="display:none;">محولات العزل</h3>
+                                <p class="ar-content" style="display:none;">حماية فائقة للمعدات الإلكترونية الحساسة.</p>
                             </div>
                         </div>
                     </div>
@@ -401,162 +417,174 @@
 
         <section class="catalogs">
             <div class="container">
-                <div class="tagline" data-reveal>RESOURCES</div>
+                <div class="tagline" data-reveal>
+                    <span class="en-content">RESOURCES</span>
+                    <span class="ar-content" style="display:none;">الموارد</span>
+                </div>
                 <h2 class="en-content" data-reveal>Product Catalogs</h2>
                 <h2 class="ar-content" style="display:none;" data-reveal>كتالوجات المنتجات</h2>
                 
-                <div class="catalogs-grid">
-                    <!-- CSB PDF Card -->
-                    <a href="assets/images/products/Battery Brands: 1) CSB.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/Battery Brands: 1) CSB.png" alt="CSB Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">Batteries</span>
-                            <span class="category-pill ar-content" style="display:none;">البطاريات</span>
-                            <h4 class="en-content">CSB Battery Catalog</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات CSB</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                <!-- Category 1: UPS Systems -->
+                <div class="catalog-category" data-reveal>
+                    <h3 class="category-title">
+                        <span class="en-content">UPS Systems</span>
+                        <span class="ar-content" style="display:none;">أنظمة UPS</span>
+                    </h3>
+                    <div class="catalogs-grid">
+                        <!-- PowerValue 11 RT Card -->
+                        <a href="assets/images/products/PowerValue 11 RT.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/PowerValue_11_RT-removebg-preview.png" alt="ABB PowerValue 11 RT">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">ABB PowerValue 11 RT</h4>
+                                <h4 class="ar-content" style="display:none;">ABB PowerValue 11 RT</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
 
-                    <!-- FIAMM PDF Card -->
-                    <a href="assets/images/products/Battery Brands: 2) FIAMM.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/Battery Brands: 2) FIAMM.png" alt="FIAMM Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">Batteries</span>
-                            <span class="category-pill ar-content" style="display:none;">البطاريات</span>
-                            <h4 class="en-content">FIAMM Battery Catalog</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات FIAMM</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                        <!-- PowerValue 11T G2 Card -->
+                        <a href="assets/images/products/PowerValue 11T G2.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/PowerValue_11T_G2-removebg-preview.png" alt="ABB PowerValue 11T G2">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">ABB PowerValue 11T G2</h4>
+                                <h4 class="ar-content" style="display:none;">ABB PowerValue 11T G2</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
 
-                    <!-- YUASA PDF Card -->
-                    <a href="assets/images/products/Battery Brands: 3) YUASA.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/Battery Brands: 3) YUASA.png" alt="YUASA Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">Batteries</span>
-                            <span class="category-pill ar-content" style="display:none;">البطاريات</span>
-                            <h4 class="en-content">YUASA Battery Catalog</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج بطاريات YUASA</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                        <!-- Rsun PDF Card -->
+                        <a href="assets/images/products/UPS Brands: 2) Rsun.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/UPS_Brands__2__Rsun-removebg-preview.png" alt="Rsun UPS Catalog">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">Rsun UPS Series</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج UPS Rsun</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
 
-                    <!-- Rsun PDF Card -->
-                    <a href="assets/images/products/UPS Brands: 2) Rsun.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/UPS Brands: 2) Rsun.png" alt="Rsun Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">UPS Systems</span>
-                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
-                            <h4 class="en-content">Rsun UPS Catalog</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج UPS Rsun</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                        <!-- Javac PDF Card -->
+                        <a href="assets/images/products/UPS Brands: 3) Javac.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/UPS_Brands__3__Javac-removebg-preview.png" alt="Javac Catalog">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">Javac UPS Series</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج UPS Javac</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                    <!-- Javac PDF Card -->
-                    <a href="assets/images/products/UPS Brands: 3) Javac.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/UPS Brands: 3) Javac.png" alt="Javac Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">UPS Systems</span>
-                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
-                            <h4 class="en-content">Javac UPS Catalog</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج UPS Javac</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                <!-- Category 2: Industrial Batteries -->
+                <div class="catalog-category" data-reveal>
+                    <h3 class="category-title">
+                        <span class="en-content">Industrial Batteries</span>
+                        <span class="ar-content" style="display:none;">البطاريات الصناعية</span>
+                    </h3>
+                    <div class="catalogs-grid">
+                        <!-- CSB PDF Card -->
+                        <a href="assets/images/products/Battery Brands: 1) CSB.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/Battery_Brands__1__CSB-removebg-preview.png" alt="CSB Catalog">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">CSB Battery Catalog</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج بطاريات CSB</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
 
-                    <!-- Powerscale PDF Card -->
-                    <a href="assets/images/products/3) Powerscale.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/3) Powerscale.png" alt="Powerscale Data">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">UPS Systems</span>
-                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
-                            <h4 class="en-content">Powerscale Technical Data</h4>
-                            <h4 class="ar-content" style="display:none;">البيانات الفنية Powerscale</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                        <!-- FIAMM PDF Card -->
+                        <a href="assets/images/products/Battery Brands: 2) FIAMM.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/Battery_Brands__2__FIAMM-removebg-preview.png" alt="FIAMM Catalog">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">FIAMM Battery Catalog</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج بطاريات FIAMM</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
 
-                    <!-- Powervalue PDF Card -->
-                    <a href="assets/images/products/2) Powervalue 11 RT.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/2) Powervalue 11 RT.png" alt="Powervalue Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">UPS Systems</span>
-                            <span class="category-pill ar-content" style="display:none;">أنظمة UPS</span>
-                            <h4 class="en-content">Powervalue 11 RT</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج Powervalue 11 RT</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                        <!-- YUASA PDF Card -->
+                        <a href="assets/images/products/Battery Brands: 3) YUASA.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/Battery_Brands__3__YUASA-removebg-preview.png" alt="YUASA Catalog">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">YUASA Battery Catalog</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج بطاريات YUASA</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                    <!-- Delta PDF Card -->
-                    <a href="assets/images/products/Stabilizer Brand : Delta.pdf" target="_blank" class="pdf-card" data-reveal>
-                        <div class="pdf-thumb">
-                            <img src="assets/images/products/pdf-images/Stabilizer Brand : Delta.png" alt="Delta Catalog">
-                            <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
-                        </div>
-                        <div class="pdf-info">
-                            <span class="category-pill en-content">Stabilizers</span>
-                            <span class="category-pill ar-content" style="display:none;">منظمات الجهد</span>
-                            <h4 class="en-content">Delta Stabilizer Catalog</h4>
-                            <h4 class="ar-content" style="display:none;">كتالوج منظمات Delta</h4>
-                        </div>
-                        <div class="pdf-action">
-                            <span class="en-content">Download PDF</span>
-                            <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                    </a>
+                <!-- Category 3: Voltage Regulators -->
+                <div class="catalog-category" data-reveal>
+                    <h3 class="category-title">
+                        <span class="en-content">Voltage Regulators</span>
+                        <span class="ar-content" style="display:none;">منظمات الجهد</span>
+                    </h3>
+                    <div class="catalogs-grid">
+                        <!-- AVR Card -->
+                        <a href="assets/images/products/Automatic_Voltage_Regulator_SRV11_Series.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/Automatic Voltage Regulator..png" alt="Automatic Voltage Regulator">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">SRV11 Series Regulators</h4>
+                                <h4 class="ar-content" style="display:none;">منظمات سلسلة SRV11</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -572,7 +600,7 @@
                     <p class="ar-content" style="display:none;">الكفاءة والتميز في كل خطوة.</p>
                     <div class="footer-socials">
                         <a href="https://www.facebook.com/alrowadenergy" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -581,28 +609,22 @@
                     <h4 class="en-content">Sitemap</h4>
                     <h4 class="ar-content" style="display:none;">خريطة الموقع</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Service</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services Column -->
-                <div class="footer-column" data-reveal>
-                    <h4 class="en-content">Services</h4>
-                    <h4 class="ar-content" style="display:none;">خدماتنا</h4>
-                    <ul class="footer-links">
-                        <li class="en-content"><a href="services.html">Architectural Design</a></li>
-                        <li class="en-content"><a href="services.html">Structural Engineering</a></li>
-                        <li class="en-content"><a href="services.html">Project Management</a></li>
-                        <li class="en-content"><a href="services.html">Urban Development</a></li>
-
-                        <li class="ar-content" style="display:none;"><a href="services.html">التصميم المعماري</a></li>
-                        <li class="ar-content" style="display:none;"><a href="services.html">الهندسة الإنشائية</a></li>
-                        <li class="ar-content" style="display:none;"><a href="services.html">إدارة المشاريع</a></li>
-                        <li class="ar-content" style="display:none;"><a href="services.html">التطوير الحضري</a></li>
+                        <li>
+                            <a href="index.html" class="en-content">Home</a>
+                            <a href="index.html" class="ar-content" style="display:none;">الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="en-content">About</a>
+                            <a href="about.html" class="ar-content" style="display:none;">عن الشركة</a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="en-content">Products</a>
+                            <a href="products.html" class="ar-content" style="display:none;">المنتجات</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="en-content">Contact</a>
+                            <a href="contact.html" class="ar-content" style="display:none;">اتصل بنا</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -613,36 +635,37 @@
                     <ul class="footer-contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p class="en-content">Al Qadda Bldgs, New Maadi, Cairo, Egypt</p>
-                            <p class="ar-content" style="display:none;">عمارات القادة، المعادي الجديدة، القاهرة، مصر</p>
+                            <p class="en-content">Address: Al Qadda Bldgs, New Maadi, Cairo, Egypt</p>
+                            <p class="ar-content" style="display:none;">العنوان: عمارات القادة، المعادي الجديدة، القاهرة، مصر</p>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <p><a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
+                            <p class="en-content">Email: <a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
+                            <p class="ar-content" style="display:none;">البريد: <a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
                         </li>
                         <li>
                
-                            <p><a href="https://wa.me/201070753167" target="_blank"><i class="fab fa-whatsapp"></i> +20 10 70753167</a></p>
+                            <p><a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> +20 10 70753168</a></p>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p class="en-content">&copy; 2026 Your Company. All rights reserved.</p>
-                    <p class="ar-content" style="display:none;">&copy; 2026 شركتك. جميع الحقوق محفوظة.</p>
-                </div>
-                <div class="designer-credit">
-                    <span class="en-content">Designed by <a href="http://www.yaaalla.com" target="_blank">Yaaalla</a></span>
-                    <span class="ar-content" style="display:none;">تصميم بواسطة <a href="http://www.yaaalla.com" target="_blank">يالا</a></span>
-                </div>
-                <div class="footer-legal-links">
-                    <a href="#" class="en-content">Privacy Policy</a>
-                    <a href="#" class="en-content">Terms of Service</a>
-                    <a href="#" class="ar-content" style="display:none;">سياسة الخصوصية</a>
-                    <a href="#" class="ar-content" style="display:none;">شروط الخدمة</a>
-                    <a href="contact.html" class="en-content">Contact Us</a>
-                    <a href="contact.html" class="ar-content" style="display:none;">اتصل بنا</a>
+                <div class="container">
+                    <div class="footer-copyright">
+                        <p class="en-content">&copy; 2026 AL-Rowad. All rights reserved.</p>
+                        <p class="ar-content" style="display:none;">&copy; 2026 الرواد. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="designer-credit">
+                        <span class="en-content">Designed by <a href="http://www.yaaalla.com" target="_blank">Yaaalla</a></span>
+                        <span class="ar-content" style="display:none;">تصميم بواسطة <a href="http://www.yaaalla.com" target="_blank">يالا</a></span>
+                    </div>
+                    <div class="footer-legal-links">
+                        <a href="#" class="en-content">Privacy Policy</a>
+                        <a href="#" class="en-content">Terms of Service</a>
+                        <a href="#" class="ar-content" style="display:none;">سياسة الخصوصية</a>
+                        <a href="#" class="ar-content" style="display:none;">شروط الخدمة</a>
+                    </div>
                 </div>
             </div>
         </div>
