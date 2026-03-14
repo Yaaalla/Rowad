@@ -42,6 +42,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Contact form AJAX submission
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('form-message');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtns = contactForm.querySelectorAll('button[type="submit"]');
+            submitBtns.forEach(btn => {
+                const isAr = btn.classList.contains('ar-content');
+                btn.disabled = true;
+                btn.innerHTML = isAr ? '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...' : '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            });
+            
+            formMessage.innerHTML = '';
+            formMessage.className = '';
+
+            const formData = new FormData(contactForm);
+
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    formMessage.style.color = '#28a745';
+                    formMessage.innerHTML = data.message;
+                    contactForm.reset();
+                } else {
+                    formMessage.style.color = '#dc3545';
+                    formMessage.innerHTML = data.message || 'Error occurred.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formMessage.style.color = '#dc3545';
+                formMessage.innerHTML = 'An unexpected error occurred. Please try again.';
+            })
+            .finally(() => {
+                submitBtns.forEach(btn => {
+                    const isAr = btn.classList.contains('ar-content');
+                    btn.disabled = false;
+                    btn.innerHTML = isAr ? 'إرسال الرسالة' : 'Send Message';
+                });
+            });
+        });
+    }
+
     // Close menu when clicking lang-switcher inside nav
     const mobileLangBtn = document.querySelector('nav .lang-switcher-mobile');
     if (mobileLangBtn) {
@@ -73,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="tooltip en-content">WhatsApp Us</span>
             <span class="tooltip ar-content">تواصل معنا واتساب</span>
         </a>
-        <a href="mailto:info@alrowad-eg.net" class="floating-btn email" aria-label="Email">
+        <a href="mailto:sales@alrowad-eg.net" class="floating-btn email" aria-label="Email">
             <i class="fas fa-envelope"></i>
             <span class="tooltip en-content">Email Us</span>
             <span class="tooltip ar-content">راسلنا إيميل</span>

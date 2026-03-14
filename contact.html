@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | AL-Rowad Excellence</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/modern-2026.css">
     <script src="assets/js/modern-2026.js" defer></script>
@@ -174,8 +175,8 @@
                             </div>
                             <h4 class="en-content">Visit Us</h4>
                             <h4 class="ar-content" style="display:none;">زورونا</h4>
-                            <p class="en-content">Al Qadda Bldgs, New Maadi, Cairo, Egypt</p>
-                            <p class="ar-content" style="display:none;">عمارات القادة، المعادي الجديدة، القاهرة، مصر</p>
+                            <p class="en-content">Mokattam Street, Building No. 1088, next to Mokattam Fire Station - ground floor, Apartment 1</p>
+                            <p class="ar-content" style="display:none;">شارع المقطم، عمارة رقم 1088، بجوار مطافئ المقطم - الدور الأرضي، شقة 1</p>
                         </div>
 
                         <div class="info-item">
@@ -185,7 +186,7 @@
                             </div>
                             <h4 class="en-content">Email Us</h4>
                             <h4 class="ar-content" style="display:none;">بريدنا</h4>
-                            <p><a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
+                            <p><a href="mailto:sales@alrowad-eg.net">sales@alrowad-eg.net</a></p>
                         </div>
 
                         <div class="info-item">
@@ -195,57 +196,61 @@
                             </div>
                             <h4 class="en-content">Call Us</h4>
                             <h4 class="ar-content" style="display:none;">اتصل بنا</h4>
-                            <p><a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> +20
-                                    10 70753168</a></p>
+                            <p><i class="fas fa-phone"></i> +20 1070753165<br>
+                               <a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> 01070753168</a></p>
                         </div>
                     </div>
 
                     <div class="contact-form-card" data-reveal>
-                        <form action="#" class="theme-form">
+                        <form id="contactForm" action="send_email.php" method="POST" class="theme-form">
+                            <!-- Language switcher fields using Formspree -->
+                            <input type="hidden" name="_language" value="en" class="en-content">
+                            <input type="hidden" name="_language" value="ar" class="ar-content" style="display:none;">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" placeholder="First Name *" required class="en-content">
-                                    <input type="text" placeholder="الاسم الأول *" required class="ar-content"
-                                        style="display:none;">
+                                    <input type="text" name="first_name" placeholder="First Name *" required class="en-content">
+                                    <input type="text" name="first_name" placeholder="الاسم الأول *" required class="ar-content"
+                                        style="display:none;" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="Last Name *" required class="en-content">
-                                    <input type="text" placeholder="اسم العائلة *" required class="ar-content"
-                                        style="display:none;">
+                                    <input type="text" name="last_name" placeholder="Last Name *" required class="en-content">
+                                    <input type="text" name="last_name" placeholder="اسم العائلة *" required class="ar-content"
+                                        style="display:none;" disabled>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email Address *" required class="en-content">
-                                <input type="email" placeholder="البريد الإلكتروني *" required class="ar-content"
-                                    style="display:none;">
+                                <input type="email" name="_replyto" placeholder="Email Address *" required class="en-content">
+                                <input type="email" name="_replyto" placeholder="البريد الإلكتروني *" required class="ar-content"
+                                    style="display:none;" disabled>
                             </div>
                             <div class="form-group">
-                                <select required class="en-content">
+                                <select required name="product_interest" class="en-content">
                                     <option value="" disabled selected>Product you're looking for?</option>
                                     <option>UPS Systems</option>
-                                    <option>Voltage Stabilizers</option>
+                                    <option>UPS</option>
                                     <option>Industrial Batteries</option>
                                     <option>Isolation Transformers</option>
                                     <option>Power Quality Solutions</option>
                                 </select>
-                                <select required class="ar-content" style="display:none;">
+                                <select required name="product_interest" class="ar-content" style="display:none;" disabled>
                                     <option value="" disabled selected>المنتج الذي تبحث عنه؟</option>
                                     <option>أنظمة UPS</option>
-                                    <option>منظمات الجهد</option>
+                                    <option>UPS</option>
                                     <option>البطاريات الصناعية</option>
                                     <option>محولات العزل</option>
                                     <option>حلول جودة الطاقة</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea rows="5" placeholder="Your Message" class="en-content"></textarea>
-                                <textarea rows="5" placeholder="رسالتك" class="ar-content"
-                                    style="display:none;"></textarea>
+                                <textarea rows="5" name="message" placeholder="Your Message" class="en-content"></textarea>
+                                <textarea rows="5" name="message" placeholder="رسالتك" class="ar-content"
+                                    style="display:none;" disabled></textarea>
                             </div>
                             <button type="submit" class="btn-premium btn-filled en-content" style="width: 100%;">Send
                                 Message</button>
                             <button type="submit" class="btn-premium btn-filled ar-content"
                                 style="display:none; width: 100%;">إرسال الرسالة</button>
+                            <div id="form-message" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
                         </form>
                     </div>
                 </div>
@@ -301,18 +306,20 @@
                     <ul class="footer-contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p class="en-content">Address: Al Qadda Bldgs, New Maadi, Cairo, Egypt</p>
-                            <p class="ar-content" style="display:none;">العنوان: عمارات القادة، المعادي الجديدة، القاهرة، مصر</p>
+                            <p class="en-content">Address: Mokattam Street, Building No. 1088, next to Mokattam Fire Station - ground floor, Apartment 1</p>
+                            <p class="ar-content" style="display:none;">العنوان: شارع المقطم، عمارة 1088، بجوار مطافئ المقطم - الدور الأرضي، شقة 1</p>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <p class="en-content">Email: <a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
-                            <p class="ar-content" style="display:none;">البريد: <a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
+                            <p class="en-content">Email: <a href="mailto:sales@alrowad-eg.net">sales@alrowad-eg.net</a></p>
+                            <p class="ar-content" style="display:none;">البريد: <a href="mailto:sales@alrowad-eg.net">sales@alrowad-eg.net</a></p>
                         </li>
                         <li>
 
-                            <p><a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> +20
-                                    10 70753168</a></p>
+                            <p>
+                                <i class="fas fa-phone"></i> +20 1070753165<br>
+                                <a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> 01070753168</a>
+                            </p>
                         </li>
                     </ul>
                 </div>

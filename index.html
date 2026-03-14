@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL-Rowad | Architecting the Future</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/modern-2026.css">
     <script src="assets/js/modern-2026.js" defer></script>
@@ -60,8 +61,8 @@
 
         .innovation-card img {
             width: 100%;
-            height: 240px;
-            object-fit: cover;
+            height: 100%;
+            object-fit: contain;
             margin-bottom: 32px;
             border-radius: 4px;
             filter: grayscale(1);
@@ -90,13 +91,19 @@
             aspect-ratio: 1;
             overflow: hidden;
             border-radius: 4px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .portfolio-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             transition: var(--transition-slow);
+            padding: 15px;
+            box-sizing: border-box;
         }
 
         .portfolio-item:hover img {
@@ -448,6 +455,15 @@
                 <div class="innovation-grid">
                     <div class="innovation-card" data-reveal>
                         <div class="portfolio-item"><img
+                                src="assets/images/products/images/ABB PowerValue UPS.jpeg"
+                                alt="ABB PowerValue UPS"></div>
+                        <h3 class="en-content">ABB PowerValue UPS</h3>
+                        <p class="en-content">Reliable power protection for critical applications.</p>
+                        <h3 class="ar-content" style="display:none;">ABB PowerValue UPS</h3>
+                        <p class="ar-content" style="display:none;">حماية موثوقة للطاقة للتطبيقات الحرجة.</p>
+                    </div>
+                    <div class="innovation-card" data-reveal>
+                        <div class="portfolio-item"><img
                                 src="assets/images/products/images/Model: C 1-10 K.jpeg"
                                 alt="UPS Model C 1-10K"></div>
                         <h3 class="en-content">UPS Systems</h3>
@@ -457,11 +473,11 @@
                     </div>
                     <div class="innovation-card" data-reveal>
                         <div class="portfolio-item"><img
-                                src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.10.35 PM (1).jpeg"
-                                alt="Electrical Supplies"></div>
-                        <h3 class="en-content">Voltage Stabilizers</h3>
+                                src="assets/images/products/images/IREM Stabilizer.jpeg"
+                                alt="UPS"></div>
+                        <h3 class="en-content">UPS</h3>
                         <p class="en-content">Precision voltage control for industrial applications.</p>
-                        <h3 class="ar-content" style="display:none;">منظمات الجهد</h3>
+                        <h3 class="ar-content" style="display:none;">UPS</h3>
                         <p class="ar-content" style="display:none;">تحكم دقيق في الجهد للتطبيقات الصناعية.</p>
                     </div>
                     <div class="innovation-card" data-reveal>
@@ -475,7 +491,7 @@
                     </div>
                     <div class="innovation-card" data-reveal>
                         <div class="portfolio-item"><img
-                                src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM (1).jpeg"
+                                src="assets/images/products/images/Industrial_Batteries.jpeg"
                                 alt="Battery Solutions"></div>
                         <h3 class="en-content">Industrial Batteries</h3>
                         <p class="en-content">Reliable Lead Acid and CSB battery solutions.</p>
@@ -484,16 +500,7 @@
                     </div>
                     <div class="innovation-card" data-reveal>
                         <div class="portfolio-item"><img
-                                src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM (2).jpeg"
-                                alt="Maintenance Services"></div>
-                        <h3 class="en-content">Maintenance & Support</h3>
-                        <p class="en-content">Expert engineering support and maintenance services.</p>
-                        <h3 class="ar-content" style="display:none;">الصيانة والدعم</h3>
-                        <p class="ar-content" style="display:none;">دعم هندسي متخصص وخدمات صيانة.</p>
-                    </div>
-                    <div class="innovation-card" data-reveal>
-                        <div class="portfolio-item"><img
-                                src="assets/images/products/images/WhatsApp Image 2026-03-09 at 12.11.12 PM (3).jpeg"
+                                src="assets/images/products/images/Isolation transformer.jpeg"
                                 alt="Isolation Transformers"></div>
                         <h3 class="en-content">Isolation Transformers</h3>
                         <p class="en-content">Superior protection for sensitive electronic equipment.</p>
@@ -578,15 +585,32 @@
                             </div>
                         </a>
 
-                        <!-- Rsun PDF Card -->
-                        <a href="assets/images/products/UPS Brands: 2) Rsun.pdf" target="_blank" class="pdf-card">
+                        <!-- Rsun Single Phase PDF Card -->
+                        <a href="assets/images/products/RSUN Catalogue for single phase 1 - 10 KVA.pdf" target="_blank" class="pdf-card">
                             <div class="pdf-thumb">
-                                <img src="assets/images/products/pdf-images/UPS_Brands__2__Rsun-removebg-preview.png" alt="Rsun UPS Catalog">
+                                <img src="assets/images/products/pdf-images/RSUN Catalogue for single phase 1 - 10 KVA.jpg" alt="Rsun Single Phase UPS Catalog">
                                 <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
                             </div>
                             <div class="pdf-info">
-                                <h4 class="en-content">Rsun UPS Series</h4>
-                                <h4 class="ar-content" style="display:none;">كتالوج UPS Rsun</h4>
+                                <h4 class="en-content">RSUN 1Ph 1-10 KVA</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج RSUN أحادي الطور</h4>
+                            </div>
+                            <div class="pdf-action">
+                                <span class="en-content">Download PDF</span>
+                                <span class="ar-content" style="display:none;">تحميل الكتالوج</span>
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
+
+                        <!-- Rsun Three Phase PDF Card -->
+                        <a href="assets/images/products/RSUN Catalogue for Three phase 10-160 KVA.pdf" target="_blank" class="pdf-card">
+                            <div class="pdf-thumb">
+                                <img src="assets/images/products/pdf-images/RSUN Catalogue for Three phase 10-160 KVA.avif" alt="Rsun Three Phase UPS Catalog">
+                                <div class="pdf-overlay-icon"><i class="fas fa-file-pdf"></i></div>
+                            </div>
+                            <div class="pdf-info">
+                                <h4 class="en-content">RSUN 3Ph 10-160 KVA</h4>
+                                <h4 class="ar-content" style="display:none;">كتالوج RSUN ثلاثي الطور</h4>
                             </div>
                             <div class="pdf-action">
                                 <span class="en-content">Download PDF</span>
@@ -723,17 +747,26 @@
                                 <h4 class="ar-content"
                                     style="display:none; font-size: 12px; color: var(--accent); margin-bottom: 8px;">
                                     العنوان</h4>
-                                <p class="en-content">Al Qadda Bldgs, New Maadi, Cairo, Egypt</p>
-                                <p class="ar-content" style="display:none;">عمارات القادة، المعادي الجديدة، القاهرة، مصر
+                                <p class="en-content">Mokattam Street, Building No. 1088, next to Mokattam Fire Station - ground floor, Apartment 1</p>
+                                <p class="ar-content" style="display:none;">شارع المقطم، عمارة 1088، بجوار مطافئ المقطم - الدور الأرضي، شقة 1
                                 </p>
                             </div>
-                            <div>
+                            <div style="margin-bottom: 24px;">
                                 <h4 class="en-content"
                                     style="font-size: 12px; color: var(--accent); margin-bottom: 8px;">EMAIL US</h4>
                                 <h4 class="ar-content"
                                     style="display:none; font-size: 12px; color: var(--accent); margin-bottom: 8px;">
                                     راسلنا</h4>
-                                <p><a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
+                                <p><a href="mailto:sales@alrowad-eg.net">sales@alrowad-eg.net</a></p>
+                            </div>
+                            <div>
+                                <h4 class="en-content"
+                                    style="font-size: 12px; color: var(--accent); margin-bottom: 8px;">CALL US</h4>
+                                <h4 class="ar-content"
+                                    style="display:none; font-size: 12px; color: var(--accent); margin-bottom: 8px;">
+                                    اتصل بنا</h4>
+                                <p><i class="fas fa-phone"></i> +20 1070753165</p>
+                                <p><a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> 01070753168</a></p>
                             </div>
                         </div>
                     </div>
@@ -752,7 +785,7 @@
                             <select class="en-content">
                                 <option value="" disabled selected>Product you're looking for?</option>
                                 <option>UPS Systems</option>
-                                <option>Voltage Stabilizers</option>
+                                <option>UPS</option>
                                 <option>Industrial Batteries</option>
                                 <option>Isolation Transformers</option>
                                 <option>Power Quality Solutions</option>
@@ -760,7 +793,7 @@
                             <select class="ar-content" style="display:none;">
                                 <option value="" disabled selected>المنتج الذي تبحث عنه؟</option>
                                 <option>أنظمة UPS</option>
-                                <option>منظمات الجهد</option>
+                                <option>UPS</option>
                                 <option>البطاريات الصناعية</option>
                                 <option>محولات العزل</option>
                                 <option>حلول جودة الطاقة</option>
@@ -814,19 +847,18 @@
                     <ul class="footer-contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <p class="en-content">Address: Al Qadda Bldgs, New Maadi, Cairo, Egypt</p>
-                            <p class="ar-content" style="display:none;">العنوان: عمارات القادة، المعادي الجديدة، القاهرة، مصر</p>
+                            <p class="en-content">Address: Mokattam Street, Building No. 1088, next to Mokattam Fire Station - ground floor, Apartment 1</p>
+                            <p class="ar-content" style="display:none;">العنوان: شارع المقطم، عمارة 1088، بجوار مطافئ المقطم - الدور الأرضي، شقة 1</p>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <p class="en-content">Email: <a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
-                            <p class="ar-content" style="display:none;">البريد: <a href="mailto:info@alrowad-eg.net">info@alrowad-eg.net</a></p>
+                            <p class="en-content">Email: <a href="mailto:sales@alrowad-eg.net">sales@alrowad-eg.net</a></p>
+                            <p class="ar-content" style="display:none;">البريد: <a href="mailto:sales@alrowad-eg.net">sales@alrowad-eg.net</a></p>
                         </li>
                         <li>
                             <p>
-
-                                <a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> +20
-                                    10 70753168</a>
+                                <i class="fas fa-phone"></i> +20 1070753165<br>
+                                <a href="https://wa.me/201070753168" target="_blank"><i class="fab fa-whatsapp"></i> 01070753168</a>
                             </p>
                         </li>
                     </ul>
